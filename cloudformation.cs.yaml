@@ -396,8 +396,8 @@
       },
       "Properties": {
         "ImageId" : { "Fn::FindInMap" : [ "AWSRegionArch2AMI", { "Ref" : "AWS::Region" },
-                          { "Fn::FindInMap" : [ "AWSInstanceType2Arch", "t2.small", "Arch" ] } ] },
-        "InstanceType"       : "t2.small",
+                          { "Fn::FindInMap" : [ "AWSInstanceType2Arch", "t2.micro", "Arch" ] } ] },
+        "InstanceType"       : "t2.micro",
         "SecurityGroups"     : [ {"Ref" : "WebServerSecurityGroup"} ],
         "IamInstanceProfile" : { "Ref" : "CFNInstanceProfile" },
         "UserData"           : { "Fn::Base64" : { "Fn::Join" : ["", [
@@ -582,8 +582,8 @@
           "Ref": "CFNInstanceProfile"
         },
         "ImageId" : { "Fn::FindInMap" : [ "AWSRegionArch2AMI", { "Ref" : "AWS::Region" },
-                          { "Fn::FindInMap" : [ "AWSInstanceType2Arch", "t2.small", "Arch" ] } ] },
-        "InstanceType": "t2.small",
+                          { "Fn::FindInMap" : [ "AWSInstanceType2Arch", "t2.micro", "Arch" ] } ] },
+        "InstanceType": "t2.micro",
         "SubnetId": {
           "Ref": "VPCSubnet"
         },
